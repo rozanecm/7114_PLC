@@ -1,0 +1,33 @@
+# data
+data;
+set Machines := SM, MM, BM;
+
+param topeVentas:=
+SM		120
+MM		80
+BM		999999999999999999;
+
+param minVentas:=
+SM		40
+MM		0
+BM		0;
+
+param ganancias:=
+SM		200
+MM		250
+BM		400;
+
+param componentes:=
+SM		5
+MM		5
+BM		15;
+
+param tecnicos:=
+SM		3
+MM		3
+BM		3;
+
+param maxComponentes := 3000;
+param maxTecnicos := 480;
+
+end;

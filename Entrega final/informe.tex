@@ -10,6 +10,7 @@
 			X5 & - & Y2 \\
 			X6 & - & Y3 \\
 			X7 & - & Y4 \\
+			X8 & - & Y5 \\
 		\end{tabular}
 		\\
 		Tabla \'optima del dual:\\
@@ -95,7 +96,13 @@
 					$$Z = 20000 + 20 C1$$
 					$$Y2 = 100/3$$
 		\end{itemize}
+		
+     	\smallskip\\
+     	\includegraphics{SM.png}
+     	\smallskip\\
+		
 	\item Caso 1:\\
+     	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
 			\hline
 			 \multicolumn{3}{|c|}{} & 3000 & 780 & 120 & -40 & 80 & & & & \\ 
@@ -114,13 +121,14 @@
 			 780 & Y2 & 175/3 & 0 & 1 & 0 & 0 & 1/2 & 1/6 & -1/2 & 0 & \\
 			 -40 & Y4 & 50 & 0 & 0 & -1 & 1 & 1 & 0 & -1 & 1 & \\
 			 3000 & Y1 & 15 & 1 & 0 & 0 & 0 & -1/10 & -1/10 & 1/10 & 0 & \\ \hline
-			 \multicolumn{3}{|c|}{Z=56000} & 500 & 0 & -80 & 0 & -80 & -220 & 0 & -40\\ \hline
+			 \multicolumn{3}{|c|}{Z=88500} & 0 & 0 & -30 & 0 & -80 & -170 & -130 & -40\\ \hline
 		\end{tabular}
 		\medskip\\
 		Llegamos a la tabla \'optima.\\
 		Ganamos $88500 - 45000 = 43500 < 56000 \Rightarrow $ No conviene.\\
 		\smallskip\\
 		Caso 2:\\
+     	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
 			\hline
 			 \multicolumn{3}{|c|}{} & 3000 & 80 & 120 & -40 & 80 & & & & \\ 
@@ -130,29 +138,40 @@
 			 0 & Y7 & 150 & 10 & 0 & 0 & 0 & -1 & -1 & 1 & 0 & 15\\ \hline
 			 \multicolumn{3}{|c|}{Z=8000/3 = 2666.6} & -3000 & 0 & -80 & 0 & -80 & 40/3 & 0 & -40 &\\ \hline
 		\end{tabular}
+		\medskip\\
+	    Como el dual tiene soluci\'on \'optima no acotada el primal no tiene soluciones posibles. Por lo tanto este opci\'on tampoco sirve. 
+     	\smallskip\\
+	    Se puede validar esto dado que no se llegue a proveer la demanda de 40 SM (X3) con solo 40 t\'ecnicos. Se necesitan por lo menos 120 t\'ecnicos para cubrir la demanda.
+		\medskip\\
 	\item Trabajamos en el primal.\\
+     	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
 			\hline
 			 \multicolumn{3}{|c|}{} & 400 & 450 & 200 & & & & & & \\ 
 			 Ck & Xk & Bk & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 & $\theta$\\ \hline 
 			 400 & X1 & 120 & 1 & 1 & 0 & 0 & 1/3 & 0 & 1 & 0 & 120\\
 			 200 & X3 & 40 & 0 & 0 & 1 & 0 & 0 & 0  & -1 & 0 & -\\
-			 0 & X4 & 1000 & 0 & -10 & 0 & 1 & -5 & 0 & -10 & 0 & \\ 
-			 0 & X6 & 80   & 0 & 0   & 0 & 0 & 0  & 1 & 1   & 0 & \\
-			 0 & X8 & 80   & 0 & 1   & 0 & 0 & 0  & 0 & 0   & 1 & \\ \hline
+			 0 & X4 & 1000 & 0 & -10 & 0 & 1 & -5 & 0 & -10 & 0 & -\\ 
+			 0 & X6 & 80   & 0 & 0   & 0 & 0 & 0  & 1 & 1   & 0 & -\\
+			 0 & X8 & 80   & 0 & 1   & 0 & 0 & 0  & 0 & 0   & 1 & 80\\ \hline
 			 \multicolumn{3}{|c|}{Z=56000} & 0 & -50 & 0 & 0 & 400/3 & 0 & 200 & 0 &\\ \hline
 		\end{tabular}
+     	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
 			\hline
 			 \multicolumn{3}{|c|}{} & 400 & 450 & 200 & & & & & & \\ 
 			 Ck  & Xk & Bk   & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 & $\theta$\\ \hline 
-			 400 & X1 & 120  & 1  & 0   & 0 & 0 & 1/3 & 0  & 1   & -1    & 120\\
-			 200 & X3 & 40   & 0  & 0   & 1 & 0 & 0   & 0  & -1  & 0     & -\\
-			 0   & X4 & 1000 & 0  & 0   & 0 & 1 & -5  & 0  & -10 & 10    & \\ 
+			 400 & X1 & 40  & 1  & 0   & 0 & 0 & 1/3 & 0  & 1   & -1    & \\
+			 200 & X3 & 40   & 0  & 0   & 1 & 0 & 0   & 0  & -1  & 0     & \\
+			 0   & X4 & 1800 & 0  & 0   & 0 & 1 & -5  & 0  & -10 & 10    & \\ 
 			 0   & X6 & 80   & 0  & 0   & 0 & 0 & 0   & 1  & 1   & 0     & \\
-			 0   & X2 & 80   & 0  & 1   & 0 & 0 & 0   & 0  & 0   & 1     & \\ \hline
-			 \multicolumn{3}{|c|}{Z=56000} & 0 & 0  & 0  & 0   & 400/3 & 0 & 200 & 50 &\\ \hline
+			 450   & X2 & 80   & 0  & 1   & 0 & 0 & 0   & 0  & 0   & 1     & \\ \hline
+			 \multicolumn{3}{|c|}{Z=60000} & 0 & 0  & 0  & 0   & 400/3 & 0 & 200 & 50 &\\ \hline
 		\end{tabular}
-
+     	\smallskip\\
+     	
+		Llegamos a la tabla \'optima.\\
+		El beneficio es de 60000 y se aumentó la ganancia en 4000 \Rightarrow   Conviene.\\
+     	
 \end{enumerate}
 \end{document}

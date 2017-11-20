@@ -1,0 +1,44 @@
+GLPK 4.57 - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    PLC
+Objective:  z = 56000 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 COMPONENTES  BS    2000.00000    1000.00000          -Inf     1200.00000     -15.00000   26000.00000 X2
+                                            .         3000.00000     2000.00000          +Inf          +Inf
+
+     2 TECNICOS     NU     480.00000        .               -Inf      120.00000    -133.33333    8000.00000 X1
+                                         133.33333     480.00000      680.00000          +Inf   82666.66667 COMPONENTES
+
+     3 MAX_SM       BS      40.00000      80.00000          -Inf       40.00000          -Inf          -Inf
+                                            .          120.00000      160.00000     200.00000   64000.00000 MIN_SM
+
+     4 MIN_SM       NL      40.00000        .           40.00000         .               -Inf   64000.00000 X3
+                                        -200.00000          +Inf      120.00000     200.00000   40000.00000 MAX_SM
+
+     5 MAX_MM       BS        .           80.00000          -Inf         .               -Inf   56000.00000
+                                            .           80.00000      120.00000     150.00000   56000.00000 X2
+
+     6 z            BS   56000.00000  -56000.00000          -Inf    40000.00000      -1.00000        .      MIN_SM
+                                            .               +Inf    56000.00000          +Inf          +Inf
+
+GLPK 4.57 - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    PLC
+Objective:  z = 56000 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 X3           BS      40.00000     200.00000        .            40.00000          -Inf          -Inf
+                                            .               +Inf      120.00000     400.00000   64000.00000 MIN_SM
+
+     2 X2           NL        .          250.00000        .          -100.00000          -Inf   71000.00000 COMPONENTES
+                                        -150.00000          +Inf       80.00000     400.00000   44000.00000 MAX_MM
+
+     3 X1           BS     120.00000     400.00000        .            40.00000     250.00000   38000.00000 X2
+                                            .               +Inf      120.00000          +Inf          +Inf
+
+End of report

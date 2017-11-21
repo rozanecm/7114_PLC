@@ -1,7 +1,12 @@
 \documentclass{article}
+<<<<<<< HEAD
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{listings}
+=======
+\usepackage{float}
+\usepackage{graphicx}
+>>>>>>> 5817a7955810425a690a6213ca21be05a3d9e6c0
 \begin{document}
 \title{Modelos y Optimizaci\'on I\\ \large{Trabajo pr\'actico: An\'alisis de sensibilidad}}
 \author{de Valais, Ezequiel (94463)\and	Rozanec, Matias (97404)}
@@ -105,15 +110,9 @@
 					$$Z = 20000 + 20 C1$$
 					$$Y2 = 100/3$$
 		\end{itemize}
-		
-     	\smallskip\\
-		Se toma el ACTVITY de SM teniendo en cuenta el activity range de componentes para generar el gr\'afico de variaciones de la cantidad de servicios SM
-     	\smallskip\\
-		Se toma el marginal de TECNICOS teniendo en cuenta el activity range de componentes para generar el gr\'afico de valores marginales de tecnicos  
-     	\smallskip\\
-		Se toma el Objective:  z teniendo en cuenta el activity range de componentes para generar el gr\'afico de variacion de funcional
-     	\smallskip\\
 
+
+	\newpage	
 \lstset { %
 	language=C++,
 	backgroundcolor=\color{black!5}, % set backgroundcolor
@@ -127,6 +126,7 @@
 }
 \lstinputlisting[frame=single]{PLC2.sol}
 
+	\newpage	
 
 \lstset { %
 	language=C++,
@@ -142,10 +142,34 @@
 \lstinputlisting[frame=single]{PLC2.sen}
 
 
-
+	\newpage	
 		
-		
-		
+     	\smallskip\\
+		Se toma el ACTVITY de SM teniendo en cuenta el activity range de componentes para generar el gr\'afico de variaciones de la cantidad de servicios SM
+     	\smallskip\\
+		Se toma el marginal de TECNICOS teniendo en cuenta el activity range de componentes para generar el gr\'afico de valores marginales de tecnicos  
+     	\smallskip\\
+		Se toma el Objective:  z teniendo en cuenta el activity range de componentes para generar el gr\'afico de variacion de funcional
+     	\smallskip\\
+	\newpage	
+     	\smallskip
+		\section{Gr\'aficos}
+		\begin{figure}[H]
+			\caption{Variaci\'on de la cantidad de servicios SM al variar la disponibilidad de componentes.}
+			\includegraphics[scale=0.35]{SM.png}
+		\end{figure}
+		\smallskip
+		\begin{figure}[H]
+			\caption{Variaci\'on del valor marginal de t\'ecnicos al variar la disponibilidad de componentes.}
+			\includegraphics[scale=0.35]{tecncosvm.png}
+		\end{figure}
+		\smallskip
+		\begin{figure}[H]
+			\caption{Variaci\'on del funcional al variar la disponibilidad de componentes.}
+			\includegraphics[scale=0.35]{funcional.png}
+		\end{figure}
+     	\smallskip
+	\newpage	
 	\item Caso 1:\\
      	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
@@ -188,6 +212,8 @@
      	\smallskip\\
 	    Se puede validar esto dado que no se llegue a proveer la demanda de 40 SM (X3) con solo 40 t\'ecnicos. Se necesitan por lo menos 120 t\'ecnicos para cubrir la demanda.
 		\medskip\\
+
+		\newpage
 	\item Trabajamos en el primal.\\
      	\smallskip\\
 		\begin{tabular}{|c  c  c | c  c  c  c  c  c  c  c  c | c |}
@@ -216,7 +242,7 @@
      	\smallskip\\
      	
 		Llegamos a la tabla \'optima.\\
-		El beneficio es de 60000 y se aumentó la ganancia en 4000 \Rightarrow   Conviene.\\
+		El beneficio es de 60000 y se aument\'o la ganancia en 4000 $\Rightarrow$   Conviene.\\
      	
 \end{enumerate}
 \end{document}

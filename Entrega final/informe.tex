@@ -1,5 +1,14 @@
 \documentclass{article}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{listings}
 \begin{document}
+\title{Modelos y Optimizaci\'on I\\ \large{Trabajo pr\'actico: An\'alisis de sensibilidad}}
+\author{de Valais, Ezequiel (94463)\and	Rozanec, Matias (97404)}
+\date{Noviembre 2017}
+\maketitle
+\newpage
+
 \begin{enumerate}
 	\item Relaci\'on entre variables del primal y del dual:\\
 		\begin{tabular}{c c c}
@@ -98,8 +107,44 @@
 		\end{itemize}
 		
      	\smallskip\\
-     	\includegraphics{SM.png}
+		Se toma el ACTVITY de SM teniendo en cuenta el activity range de componentes para generar el gr\'afico de variaciones de la cantidad de servicios SM
      	\smallskip\\
+		Se toma el marginal de TECNICOS teniendo en cuenta el activity range de componentes para generar el gr\'afico de valores marginales de tecnicos  
+     	\smallskip\\
+		Se toma el Objective:  z teniendo en cuenta el activity range de componentes para generar el gr\'afico de variacion de funcional
+     	\smallskip\\
+
+\lstset { %
+	language=C++,
+	backgroundcolor=\color{black!5}, % set backgroundcolor
+	basicstyle=\footnotesize,% basic font setting
+	linewidth=14cm,
+	showstringspaces=true,
+	numbers=left,
+	numberstyle=\tiny,
+	breaklines=true,
+	tabsize=4,
+}
+\lstinputlisting[frame=single]{PLC2.sol}
+
+
+\lstset { %
+	language=C++,
+	backgroundcolor=\color{black!5}, % set backgroundcolor
+	basicstyle=\footnotesize,% basic font setting
+	linewidth=14cm,
+	showstringspaces=true,
+	numbers=left,
+	numberstyle=\tiny,
+	breaklines=true,
+	tabsize=4,
+}
+\lstinputlisting[frame=single]{PLC2.sen}
+
+
+
+		
+		
 		
 	\item Caso 1:\\
      	\smallskip\\

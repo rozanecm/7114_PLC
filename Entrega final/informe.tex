@@ -1,7 +1,22 @@
 \documentclass{article}
+\usepackage{listings}
+\usepackage{pdfpages}
 \usepackage{float}
 \usepackage{graphicx}
 \begin{document}
+\title{Modelos y Optimizaci\'on I\\ \large{Trabajo pr\'actico: An\'alisis de sensibilidad}}
+\author{de Valais, Ezequiel (94463)\and Rozanec, Matias (97404)}
+\date{Noviembre 2017}
+\maketitle
+\newpage
+% FIN PRESENTACION
+
+% Consigna
+%\part{Consigna}
+\includepdf{enunciado_analisis_sensibilidad.pdf}
+\newpage
+
+% Resolucion
 \begin{enumerate}
 	\item Relaci\'on entre variables del primal y del dual:\\
 		\begin{tabular}{c c c}
@@ -98,6 +113,21 @@
 					$$Z = 20000 + 20 C1$$
 					$$Y2 = 100/3$$
 		\end{itemize}
+
+		A continuaci\'on, se incluye la salida de software del an\'alisis de sensibilidad. Debido a que no se logra mostrar correctamente en el informe, se adjunta adem\'as junto al presente documento.
+		\lstset { %
+	    language=C++,
+		backgroundcolor=\color{black!5}, % set backgroundcolor
+	    basicstyle=\tiny,% basic font setting
+	    linewidth=14cm,
+	    showstringspaces=true,
+	    numbers=left,
+	    numberstyle=\tiny,
+	    breaklines=true,
+	    tabsize=4,
+		}
+
+		\lstinputlisting[frame=single]{../PLC2.sen}
 		
      	\smallskip
 		\section{Gr\'aficos}
